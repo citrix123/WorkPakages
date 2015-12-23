@@ -1,0 +1,32 @@
+/*
+.container{
+	width: 432px;
+	height: 330px;
+	top: 300px;
+	padding-top: 130px;
+}	
+
+h3{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+.btn{
+	margin-left: 80px;
+	margin-top: 12px;
+	font-size: 16px;
+}
+*/
+html, body, .container-table {
+    height: 100%;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="<?php echo base_url();?>css/box.css">
+	</head>
+	<body>
+		<!----------Userpage Start------------>
+
+
+<div class = "Border">
+
+		<a href="#window" class="window_a"> Login </a>	
+		<a href="#window" class="window_1">  Customer</a>	
+		<a href="#window" class="window_2">  Truck Owner</a>	
+		<a href="#window" class="window_3">  Agent</a>	
+		<div id="window" class="MyWindow">
+
+			<div class="window-block">
+				<a href="#" class= "Cancel">X</a>
+				<!---<div class = "Sign_Google"> <p>Sign in with google </p> </div>
+				<div class = "Sign_Facebook"> <p>Sign in with facebook </p> </div>---->
+                <form action="form_processor_login" method="post">
+                    <input class ="Login"type="text" name="login" value="" placeholder="Login ID"> 
+                    <input class ="Password"type="Password" name="passWord" value="" placeholder="Password"> 
+                    <input type="submit" class = "User" value="OK"></input>
+                    <input type="button" class = "Sign" value="SignUp" onclick="location.href='<?php echo site_url('login/link_to_Customer'); ?>'" />
+                </form>
+<!--				<div class = "Sign"> <a href = "/home/citrix/Desktop/HTML/customer.html">Sign Up </a></div>-->
+				<!-----<h6> Forgot Your Password?</h6>
+				<input class = "Box" type="checkbox" name="remember_me" id="remember_me">
+				<h5> Remember me. I come here often. </h5>
+				<div class ="Accept"> When you login accept our 
+					<div class = "Terms">terms of use </div> 
+					<div class ="And">and </div>
+					<div class = "Privacy">privacy policy</div>---->
+					
+			</div>
+		</div>
+</div>
+		
+		<!----------Userpage End------------>
+		
+		
+	</body>
+</html>

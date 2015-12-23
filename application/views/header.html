@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
+  <link rel ="stylesheet" href ="header.css">
+  <script src="<?php echo base_url(); ?>css/jquery.min.js"></script>
+  <script src="<?php echo base_url(); ?>css/bootstrap.min.js"></script>
+  <script src="<?php echo base_url(); ?>css/validation.js"></script>
+</head>
+<body>
+	<nav class ="navbar navbar-default" role="navigation">
+		<div class ="container-fluid">
+			<div class ="navbar-header">
+				 <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-SignUp-navbar-collapse-1">
+
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+			<a class = "navbar-brand" href ="#"> logo</a>
+			</div>
+			<div class ="collapse navbar-collapse navbar-right" id ="bs-SignUp-navbar-collapse-1">
+	         <ul class ="nav navbar-nav">
+				<li><a data-toggle="modal" data-target="#loginForm">LogIn</a></li>
+				<!--<li><a href ="#">Signup</a></li>--->
+				<li class ="dropdown">
+					<a href ="#" class ="dropdown-toggle" data-toggle ="dropdown"> SignUp
+						<span class ="caret"></span></a>
+						<ul class ="dropdown-menu">
+							<li><a data-toggle="modal" data-target="#truckSignupForm" > Truck Owner </a></li>
+							<li class ="divider"></li>
+							<li><a data-toggle="modal" data-target="#customerSignupForm"> Customer </a></li>
+							<li class ="divider"></li>
+							<li><a data-toggle="modal" data-target="#agentSignupForm"> Agent </a></li>
+                            
+                        </ul>
+				</ul>
+		  </div>
+		</div>
+	</nav>
+        <!-------------Popup Log in Form--------------->
+    <div class ="modal fade" id ="loginForm">
+		<div class ="modal-dialog">
+			<div class ="modal-content">
+				<div class ="modal-header">
+					<button type ="button" class ="close" data-dismiss ="modal" aria-label =""><span>&times;</span></button>
+				<h4 class ="modal-title">Sign Up</h4>
+				</div>
+				<div class ="modal-body">
+					<form class ="form-horizontal" action="login_parser" method="post">
+						<div class ="form-group">
+							<label class ="col-md-4 col-md-offset-1"> UserName:</label>
+							<div class ="col-md-5">
+								<input type ="text" class ="form-control input-sm" name="lUname" required>
+							</div>
+							</div>
+							
+							
+							
+							<div class ="form-group">
+							<label class ="col-md-4 col-md-offset-1"> Password:</label>
+							<div class ="col-md-5">
+								<input type ="password" class ="form-control input-sm" name="lPass" required>
+							</div>
+							</div>
+							
+							
+							<div class ="form-group">
+							
+							<div class ="col-md-2 col-md-offset-8">
+								<input type ="submit" class ="btn btn-success" value ="Done">
+							</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class ="modal-footer"></div>
+			</div>
+		</div>
+    
+        <!-------------Popup Sign Up Form for Truck owner--------------->
+        <div class ="modal fade" id ="truckSignupForm">
+		<div class ="modal-dialog">
+			<div class ="modal-content">
+				<div class ="modal-header">
+					<button type ="button" class ="close" data-dismiss ="modal" aria-label =""><span>&times;</span></button>
+				<h4 class ="modal-title">Sign Up</h4>
+				</div>
+				<div class ="modal-body">
+					<form class ="form-horizontal" action="truck_signup_parser" method="post">
+						<div class ="form-group">
+							<label class ="col-md-4 col-md-offset-1"> ID:</label>
+                                <div class ="col-md-5">
+                                    <input type ="text" class ="form-control input-sm" name="tId">
+                                </div>
+							</div>
+							
+							<div class ="form-group">
+                                <label class ="col-md-4 col-md-offset-1"> Email ID:</label>
+                                <div class ="col-md-5">
+                                    <input type ="email" class ="form-control input-sm" name="tEmail">
+                                </div>
+							</div>
+							
+							<div class ="form-group">
+                                <label class ="col-md-4 col-md-offset-1"> Password:</label>
+                                <div class ="col-md-5">
+                                    <input type ="password" class ="form-control input-sm" name="tPassword">
+                                </div>
+							</div>
+							
+							<div class ="form-group">
+                                <label class ="col-md-4 col-md-offset-1"> Contact No:</label>
+                                <div class ="col-md-5">
+                                    <input type ="text" class ="form-control input-sm" name="tMobile">
+                                </div>
+							</div>
+							
+							<div class ="form-group">
+                                <div class ="col-md-2 col-md-offset-8">
+                                    <input type ="submit" class ="btn btn-success" value ="Done">
+                                </div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class ="modal-footer"></div>
+			</div>
+		</div>
+    
+        <!-------------Popup Sign Up Form for Customer--------------->
+        <div class ="modal fade" id ="customerSignupForm">
+		<div class ="modal-dialog">
+			<div class ="modal-content">
+				<div class ="modal-header">
+					<button type ="button" class ="close" data-dismiss ="modal" aria-label =""><span>&times;</span></button>
+				<h4 class ="modal-title">Sign Up</h4>
+				</div>
+				<div class ="modal-body">
+					<form  class ="form-horizontal" action="customer_signup_parser" method="post" >
+						<div class ="form-group">
+							<label class ="col-md-4 col-md-offset-1"> Username:</label>
+                                <div class ="col-md-5">
+                                    <input type ="text" class ="form-control input-sm" name="cUname" required>
+                                </div>
+				        </div>
+							
+                        <div class ="form-group">
+                            <label class ="col-md-4 col-md-offset-1"> Email ID:</label>
+                                <div class ="col-md-5">
+                                    <input type ="email" class ="form-control input-sm" name="cEmail">
+                                </div>
+				        </div>
+						<!-- No Need of it as we are generating automatically	
+							<div class ="form-group">
+                                <label class ="col-md-4 col-md-offset-1"> Password:</label>
+                                <div class ="col-md-5">
+                                    <input type ="password" class ="form-control input-sm" name="cPassword">
+                                </div>
+							</div>
+                        -->
+                        <div class ="form-group">
+                            <label class ="col-md-4 col-md-offset-1"> Make your username same as your Email Id</label>
+                                <div class ="col-md-5">
+                                    <input type="checkbox" name="cSameId"></label>
+                                </div>
+						</div>
+							
+                        <div class ="form-group">
+								<label class ="col-md-4 col-md-offset-1"> Customer Type</label>
+								<div class ="col-md-5">
+								 <select class="form-control" id="sel1">
+									<option>Select Type</option>
+									<option>Agent</option>
+									<option>Customer</option>
+									<option>Truck Owner</option>
+								  </select>
+								</div>
+				        </div>    
+				        <div class ="form-group">
+                            <label  class ="col-md-4 col-md-offset-1"> Contact No:</label>
+                            <div class ="col-md-5">
+                                <input id="cMobile" type='text' class ="form-control input-sm" name="cMobile" required>
+                                <label id="errmsg"></label>
+                            </div>
+				        </div>
+							
+                        <div class ="form-group">
+                            <div class ="col-md-2 col-md-offset-8">
+                                <input type ="submit" class ="btn btn-success" value ="Done">
+                            </div>
+				        </div>
+				</div>
+            </form>
+				</div>
+				<div class ="modal-footer"></div>
+			</div>
+		</div>
+
+        <!-------------Popup Sign Up Form for Broker--------------->
+        <div class ="modal fade" id ="agentSignupForm">
+        
+		<div class ="modal-dialog">
+			<div class ="modal-content">
+				<div class ="modal-header">
+					<button type ="button" class ="close" data-dismiss ="modal" aria-label =""><span>&times;</span></button>
+				<h4 class ="modal-title">Sign Up</h4>
+				</div>
+				<div class ="modal-body">
+					<form  class ="form-horizontal" action="customer_signup_parser" method="post" >
+						<div class ="form-group">
+							<label class ="col-md-4 col-md-offset-1"> Username:</label>
+                                <div class ="col-md-5">
+                                    <input type ="text" class ="form-control input-sm" name="cUname" required>
+                                </div>
+				        </div>
+							
+                        <div class ="form-group">
+                            <label class ="col-md-4 col-md-offset-1"> Email ID:</label>
+                                <div class ="col-md-5">
+                                    <input type ="email" class ="form-control input-sm" name="cEmail">
+                                </div>
+				        </div>
+						<!-- No Need of it as we are generating automatically	
+							<div class ="form-group">
+                                <label class ="col-md-4 col-md-offset-1"> Password:</label>
+                                <div class ="col-md-5">
+                                    <input type ="password" class ="form-control input-sm" name="cPassword">
+                                </div>
+							</div>
+                        -->
+                        <div class ="form-group">
+                            <label class ="col-md-4 col-md-offset-1"> Make your username same as your Email Id</label>
+                                <div class ="col-md-5">
+                                    <input type="checkbox" name="cSameId"></label>
+                                </div>
+						</div>
+							
+                        <div class ="form-group">
+								<label class ="col-md-4 col-md-offset-1"> Customer Type</label>
+								<div class ="col-md-5">
+								 <select class="form-control" id="sel1">
+									<option>Select Type</option>
+									<option>Agent</option>
+									<option>Customer</option>
+									<option>Truck Owner</option>
+								  </select>
+								</div>
+				        </div>    
+				        <div class ="form-group">
+                            <label  class ="col-md-4 col-md-offset-1"> Contact No:</label>
+                            <div class ="col-md-5">
+                                <input id="cMobile" type='text' class ="form-control input-sm" name="cMobile" required>
+                                <label id="errmsg"></label>
+                            </div>
+				        </div>
+							
+                        <div class ="form-group">
+                            <div class ="col-md-2 col-md-offset-8">
+                                <input type ="submit" class ="btn btn-success" value ="Done">
+                            </div>
+				        </div>
+				</div>
+            </form>
+				</div>
+				<div class ="modal-footer"></div>
+			</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+          //called when key is pressed in textbox
+          $("#cMobile").keypress(function (e) {
+             //if the letter is not digit then display error and don't type anything
+             if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $("#errmsg").html("Digits Only").show().fadeOut("slow");
+//                       return false;
+            }
+           });
+        });
+    </script>
+</body>
+</html>
